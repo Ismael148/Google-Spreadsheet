@@ -1,50 +1,53 @@
+<h1 id="google-spreasheet"><strong>Google Spreasheet</strong></h1>
 
-#**Google Spreasheet**
+<h2 id="pré-requis">Pré-requis</h2>
 
- 
+<p>Avant de lancer le programme sur le terminal , il faut tout d’abord installer les <em>gems</em> ci dessous :</p>
 
-##Pré-requis
+<blockquote>
+  <p>gem  ‘rubocop’ <br>
+  gem  ‘nokogiri’  <br>
+  gem  ‘google_drive’ <br>
+  gem  ‘json’ <br>
+  gem  ‘csv’ <br>
+  gem  ‘rubysl-open-uri’</p>
+</blockquote>
 
+<p>Ensuite, on les mets à jour grâce à la commande :</p>
 
-Avant de lancer le programme sur le terminal , il faut tout d'abord installer les *gems* ci dessous :
-
->gem  'rubocop'
-gem  'nokogiri' 
-gem  'google_drive'
-gem  'json'
-gem  'csv'
-gem  'rubysl-open-uri'
-
-
-Ensuite, on les mets à jour grâce à la commande :
-
->~$ bundle install
-
-
-##Instruction
-
-Ce projet consiste à enregistrer des emails  dans un fichier JSON , CSV et dans le spreadsheet de Google. 
-
-##Usage
-
-Pour pouvoir lancer correctement le programme sur le terminal , il faut que nous nous mettions tout d'abord dans le dossier ou il y a l'extension *.rb *
-
->~/Google_Spreadsheet/JSON_scrapper/lib$ 
-
-
-et ensuite taper la commande  suivant
-
->~/Google_Spreadsheet/JSON_scrapper/lib *$bundle exec ruby scrapper.rb*
-
-##Warning
-
-L'enregistrement des emails dans chaque pourrait être interrompu si votre connexion est lent.
+<blockquote>
+  <p>~$ bundle install</p>
+</blockquote>
 
 
 
+<h2 id="instruction">Instruction</h2>
 
-##Author
+<p>Ce projet consiste à enregistrer des emails  dans un fichier JSON , CSV et dans le spreadsheet de Google. </p>
 
-Zo Lalaina ismael Rajaoharimanana
-https://github.com/Ismael148
 
+
+<h2 id="usage">Usage</h2>
+
+<p>Pour pouvoir lancer correctement le programme sur le terminal , il faut que nous nous mettions tout d’abord dans le dossier ou il y a l’extension <em>.rb </em></p>
+
+<blockquote>
+  <p>~/Google_Spreadsheet/JSON_scrapper/lib$ </p>
+</blockquote>
+
+<p>et ensuite taper la commande  suivant</p>
+
+<blockquote>
+  <p>~/Google_Spreadsheet/JSON_scrapper/lib <em>$bundle exec ruby scrapper.rb</em></p>
+</blockquote>
+
+
+
+<h2 id="warning">Warning</h2>
+
+<p>L’enregistrement des emails dans chaque pourrait être interrompu si votre connexion est lent.</p>
+
+<h2 id="author">Author</h2>
+
+<p>Zo Lalaina ismael Rajaoharimanana <br>
+<a href="https://github.com/Ismael148">https://github.com/Ismael148</a></p>
