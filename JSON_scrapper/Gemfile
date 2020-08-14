@@ -1,0 +1,10 @@
+source "https://rubygems.org"
+ruby '2.7.0'
+
+gem 'pry', '~> 0.13.1'
+gem 'rubocop', '~> 0.57.2'
+gem 'nokogiri', '~> 1.10.10'
+gem 'google_drive', '~> 3.0.5'
+gem 'json', '~> 2.3.1'
+gem 'csv', '~> 3.1.7'
+gem 'rubysl-open-uri', '~> 2.0'
