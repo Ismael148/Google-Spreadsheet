@@ -29,23 +29,21 @@
 
 <h2 id="usage">Usage</h2>
 
-<p>Pour pouvoir lancer correctement le programme sur le terminal , il faut que nous nous mettions tout d’abord dans le dossier ou il y a l’extension <em>.rb </em></p>
+<p>Pour pouvoir lancer correctement le programme sur le terminal , il faut que nous nous mettions tout d’abord dans le dossier ou il y a l’extension <em>.rb </em>. Prenons l’exemple ci dessous :</p>
 
 <blockquote>
   <p>~/Google_Spreadsheet/JSON_scrapper/lib$ </p>
 </blockquote>
 
-<p>et ensuite taper la commande  suivant</p>
+<p>et ensuite tape  la commande  suivant</p>
 
 <blockquote>
-  <p>~/Google_Spreadsheet/JSON_scrapper/lib <em>$bundle exec ruby scrapper.rb</em></p>
+  <p><em>$bundle exec ruby scrapper.rb</em></p>
 </blockquote>
-
-
 
 <h2 id="warning">Warning</h2>
 
-<p>L’enregistrement des emails dans chaque pourrait être interrompu si votre connexion est lent.</p>
+<p>L’enregistrement des emails dans chaque fichier pourrait être interrompu si votre connexion est lent.</p>
 
 <h2 id="author">Author</h2>
 
