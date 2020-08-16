@@ -1,6 +1,4 @@
-<h1 id="google-spreasheet"><strong>Google Spreasheet</strong></h1>
-
-
+<h1 id="google-spreadsheet"><strong>Google Spreadsheet</strong></h1>
 
 <h2 id="pré-requis">Pré-requis</h2>
 
