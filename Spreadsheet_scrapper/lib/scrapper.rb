@@ -1,7 +1,8 @@
 require 'rubygems'
 require 'nokogiri'
-require 'uri'
+require 'open-uri'
 require 'google_drive'
+
 
 
 class Mairie
@@ -42,37 +43,41 @@ class Mairie
   # reconstitution du resultat
   def perform
     result = []
+    limit = 20
     full_link.each do |element|
+      if result.length > limit
+           break
+         end
       result << {get_city_names(element) => get_townhall_email(element)}
       puts result
       end
 
       # confirmation pour modifier le spreadsheet
       puts ""
-      puts "Veux tu modifier le fichier en spreadsheet? (oui ou non)"
-      print '>'
+      puts "Pour modifier le fichier en spreadsheet by google , veuillez choisir 'oui' ou 'non'"
+      print '~>'
       confirm = gets.chomp
 
       if confirm == 'oui'
         # Accession a google sheet
-        #https://docs.google.com/spreadsheets/d/1TjolqfI4lNHMHd-rhIw5C6Ok2RXW3D61_-_1YXOQmt4/edit#gid=0
-        session = GoogleDrive::Session.from_service_account_key("./db/my-first-project-286406-5aa9bde0ed3dc.json")
-        ws = session.spreadsheet_by_title("emails").worksheets[0]
+        #https://docs.google.com/spreadsheets/d/1xpjvk8XrxkXWHKHg2MMq6RRnvDt7TFOISZBNd0Ghtpw/edit#gid=0
+        session = GoogleDrive::Session.from_service_account_key("./db/my-first-project-286406-5aa9be0ed3dc.json")
+        ws = session.spreadsheet_by_title("spreadsheets").worksheets[0]
         k = 2
-        ws[1, 1] = "Villes"
-        ws[1, 2] = "Emails"
-        limit = 5
-          result[0..90].each do |element| # (0..90) a cause du restriction de google (requests per 100 seconds)
+        ws[1, 1] = "Ville"
+        ws[1, 2] = "Email"
+      
+
+          #result[0..90].each do |element| # (0..90) a cause du restriction de google (requests per 100 seconds)
             element.each do |key, value|
               ws[k, 1] = key
               ws[k, 2] = value
               ws.save 
               k += 1
             end
-          end
-        puts "Copie Reussie!"
+        puts "Fichier Spreadsheet reecrit avec succés!"
       else
-        puts ".............."
+        puts "Fichier Spreadsheet vide!"
       end
   end
 end
