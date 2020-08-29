@@ -4,18 +4,7 @@
 
 <h2 id="pré-requis">Pré-requis</h2>
 
-<p>Avant de lancer le programme sur le terminal , il faut tout d’abord installer les <em>gems</em> ci dessous :</p>
-
-<blockquote>
-  <p>gem  ‘rubocop’ <br>
-  gem  ‘nokogiri’  <br>
-  gem  ‘google_drive’ <br>
-  gem  ‘json’ <br>
-  gem  ‘csv’ <br>
-  gem  ‘rubysl-open-uri’</p>
-</blockquote>
-
-<p>Ensuite, on les mets à jour grâce à la commande :</p>
+<p>Avant de lancer le programme sur le terminal , on  met à jour les gems à utiliser grâce à la commande :</p>
 
 <blockquote>
   <p>~$ bundle install</p>
