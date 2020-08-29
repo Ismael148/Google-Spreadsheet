@@ -3,6 +3,8 @@ require 'nokogiri'
 require 'open-uri'
 require 'csv'
 
+
+
 class Mairie
   @@url = "http://annuaire-des-mairies.com" # Le lien de base
 
@@ -14,6 +16,7 @@ class Mairie
     end
   end
   
+
   # reconstituer le lien complet pour acceder a chaque page
   def full_link
     @href_arr.map do |link|
@@ -41,15 +44,19 @@ class Mairie
   # reconstitution du resultat
   def perform
     result = []
+    limit = 20
     full_link.each do |element|
+         if result.length > limit
+           break
+         end
       result << {get_city_names(element) => get_townhall_email(element)}
-      puts result
+         puts result
       end
 
       # pour demander si l'utilisateur veut modifier le fichier cvs
       puts ""
-      puts "Veux tu modifier le fichier en CSV? (oui ou non)"
-      print '>'
+      puts "Pour modifier le fichier en CSV, veuillez choisir entre 'oui' ou 'non'"
+      print '~>'
       confirm = gets.chomp
       if confirm == 'oui'
         # Ouverture et ecriture du fichier csv
@@ -57,10 +64,11 @@ class Mairie
         result = result.map { |data| data.join(",") }.join("\n")
         File.open("./db/emails.csv", 'w') do |file|
         file.write(result)
+
         end
-        puts "CSV reecrit avec succes!"
+        puts "Fichier emails.csv réecrit avec succes!"
       else
-        puts "CSV reste intacte"
+        puts "Fichier emails.csv vide"
       end
   end
 end
